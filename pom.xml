@@ -22,7 +22,7 @@
 
   <groupId>com.noctarius.graphquul</groupId>
   <artifactId>graphquul</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <properties>
     <!-- common project properties -->
@@ -52,39 +52,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <scm>
-    <connection>scm:git:git://github.com/noctarius/graphquul.git</connection>
-    <developerConnection>scm:git:git@github.com:noctarius/graphquul.git</developerConnection>
-    <url>https://github.com/noctarius/graphquul/</url>
-    <tag>HEAD</tag>
-  </scm>
-
-  <developers>
-    <developer>
-      <id>cengelbert</id>
-      <name>Christoph Engelbert (@noctarius2k)</name>
-      <email>noctarius@apache.org</email>
-      <timezone>+1</timezone>
-    </developer>
-  </developers>
-
-  <licenses>
-    <license>
-      <name>APACHE LICENSE 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-    </license>
-  </licenses>
-
-  <issueManagement>
-    <system>github</system>
-    <url>https://github.com/noctarius/graphquul/issues</url>
-  </issueManagement>
-
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://noctarius.ci.cloudbees.com/job/graphquul</url>
-  </ciManagement>
 
   <build>
     <resources>
@@ -221,20 +188,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-scm-publish-plugin</artifactId>
-        <version>1.1</version>
-        <configuration>
-          <checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory>
-          <checkinComment>Publishing javadoc for ${project.artifactId}:${project.version}</checkinComment>
-          <content>${project.build.directory}/site/apidocs</content>
-          <skipDeletedFiles>true</skipDeletedFiles>
-          <pubScmUrl>scm:git:git@github.com:noctarius/graphquul.git</pubScmUrl>
-          <scmBranch>gh-pages</scmBranch>
-        </configuration>
       </plugin>
     </plugins>
   </build>
